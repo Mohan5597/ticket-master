@@ -1,0 +1,30 @@
+customer
+     _id
+     name-String -required
+     email -String - required-validate
+     mobile-String-required-length-10,number
+     createdAt-Date Default Date.now()
+
+department
+     _id
+     name-String -required
+     createdAt-Date Default Date.now()
+
+employee
+     _id
+     name-String -required
+     email -String - required-validate
+     mobile-String-required-length-10,number
+     department-Schema.Types.ObjectId
+     createdAt-Date Default Date.now()
+
+ticket
+     _id
+     customer-Schema.Types.ObjectId
+     message-String
+     priority-String
+     department-Schema.Types.ObjectId
+     employee-Schema.Types.ObjectId
+     ticketCode-StringisCompleted-Boolean,default is false
+     createdAt-Date Default Date.now()
+    
